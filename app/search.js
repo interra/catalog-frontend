@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest, fetch } from 'redux-saga/effects';
+import { call, select, takeLatest, fetch } from 'redux-saga/effects';
 import request from 'utils/request';
 import elasticlunr from 'elasticlunr';
 import elasticsearch from 'elasticsearch';

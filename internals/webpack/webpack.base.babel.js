@@ -15,7 +15,7 @@ const omit = require('lodash/omit');
 process.noDeprecation = true;
 
 const config = fs.readFileSync(path.resolve(process.cwd(), 'config.yml'), 'utf8');
-const interraConfig = omit(YAML.parse(config), 'private'); 
+const interraConfig = omit(YAML.parse(config), 'private');
 
 module.exports = (options) => ({
   entry: options.entry,
@@ -101,7 +101,7 @@ module.exports = (options) => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
-      'interraConfig': JSON.stringify(interraConfig),
+      interraConfig: JSON.stringify(interraConfig),
     }),
     new webpack.NamedModulesPlugin(),
   ]),
