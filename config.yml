@@ -1,0 +1,47 @@
+name: 'DKAN Demo'
+prodUrl: http://catalog-demo.interra.io
+testUrl: http://catalog-demo.interra.io
+devUrl: ''
+publicPath: '/interra/'
+identifier: dkan-demo
+schema: pod-full
+description: 'this is a demo'
+front-page-icon-collection: theme
+front-page-icons:
+ - hospitalcompare 
+ - homehealthcompare 
+ - hospicecompare 
+ - supplierdirectory 
+ - nursinghomecompare 
+ - physiciancompare 
+search:
+  type: simpleSearch 
+  fields:
+    - title
+    - keyword
+    - publisher
+    - description
+    - theme
+    - modified
+    - distribution
+siteMap:
+- title: Home
+  loc: "/"
+  children:
+  - title: About
+    loc: "/about"
+  - title: Search
+    loc: "/search"
+  - title: API
+    loc: "/api"
+  - title: Groups
+    loc: "/groups"
+    children:
+    - collections
+siteMapCollections:
+  - organization 
+  - dataset
+  - distribution 
+fontConfig:
+  navBarBackColor: "#0A77BD"
+ 
