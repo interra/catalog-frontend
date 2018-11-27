@@ -1,10 +1,10 @@
 {
-  "name": "interra-catalog-generate",
+  "name": "interra-catalog-frontend",
   "version": "0.0.1",
-  "description": "Data catalog generator.",
+  "description": "Data catalog frontend.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/interra/catalog.git"
+    "url": "git://github.com/interra/catalog-frontend.git"
   },
   "engines": {
     "npm": ">=3",
@@ -21,10 +21,10 @@
     "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --define SITE=$SITE --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules",
-    "build:clean": "rimraf ./build/$SITE/*",
+    "build": "cross-env NODE_ENV=production webpack --define --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules",
+    "build:clean": "rimraf ./build/*",
     "build:dll": "node ./internals/scripts/dependencies.js",
-    "start": "cross-env NODE_ENV=development SITE=$SITE node server",
+    "start": "cross-env NODE_ENV=development node server",
     "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
     "start:production": "npm run test && npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
@@ -213,7 +213,6 @@
   },
   "dependencies": {
     "algoliasearch": "^3.24.6",
-    "aws-sdk": "^2.154.0",
     "axios": "^0.17.0",
     "babel-polyfill": "6.23.0",
     "bootstrap": "^3.3.7",
@@ -232,13 +231,12 @@
     "history": "4.6.3",
     "hoist-non-react-statics": "2.1.1",
     "html-to-react": "^1.2.11",
-    "http-aws-es": "^3.1.3",
     "immutable": "3.8.1",
     "intl": "1.2.5",
     "invariant": "2.2.2",
     "ip": "1.1.5",
     "leaflet": "^1.2.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.5",
     "lunr": "^2.1.2",
     "minimist": "1.2.0",
     "prop-types": "15.5.10",

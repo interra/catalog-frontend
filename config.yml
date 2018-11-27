@@ -1,8 +1,8 @@
 name: 'DKAN Demo'
 prodUrl: http://catalog-demo.interra.io
 testUrl: http://catalog-demo.interra.io
-devUrl: ''
-publicPath: '/interra/'
+devUrl: 'http://admin.d8.dkandemo.nuamsdev.com'
+#publicPath: '/interra/'
 identifier: dkan-demo
 schema: pod-full
 description: 'this is a demo'

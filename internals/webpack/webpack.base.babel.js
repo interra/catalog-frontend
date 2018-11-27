@@ -13,10 +13,8 @@ const omit = require('lodash/omit');
 // see https://github.com/webpack/loader-utils/issues/56 parseQuery() will be replaced with getOptions()
 // in the next major version of loader-utils.'
 process.noDeprecation = true;
-const site = process.env.SITE;
 
-// TODO: use the site model.
-const config = fs.readFileSync(path.resolve(process.cwd(), 'sites/' + site + '/config.yml'), 'utf8');
+const config = fs.readFileSync(path.resolve(process.cwd(), '/config.yml'), 'utf8');
 const interraConfig = omit(YAML.parse(config), 'private'); 
 
 console.log(interraConfig.publicPath);
@@ -24,7 +22,7 @@ console.log(interraConfig.publicPath);
 module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
-    path: path.resolve(process.cwd(), 'build/' + options.site),
+    path: path.resolve(process.cwd(), 'build'),
     publicPath: interraConfig.publicPath,
   }, options.output), // Merge with env dependent settings
   module: {

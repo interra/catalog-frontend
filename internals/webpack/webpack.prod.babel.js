@@ -4,15 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 
-const site = process.env.SITE;
-
-if (site == undefined && process.argv[1].split('/')[process.argv[1].split('/').length -1] === 'webpack') {
-  console.log("You must specify a site using SITE=");
-  process.exit(0);
-}
-
 module.exports = require('./webpack.base.babel')({
-  site: site,
   // In production, we skip all hot-reloading stuff
   entry: [
     path.join(process.cwd(), 'app/app.js'),
