@@ -1,13 +1,5 @@
 /* eslint consistent-return:0 */
 
-const site = process.env.SITE;
-if (site == undefined) {
-  console.log("You must specify a site");
-  process.exit(0);
-} else {
-  console.log("Starting dev server for " + site);
-}
-
 const express = require('express');
 const logger = require('./logger');
 
@@ -26,7 +18,6 @@ const app = express();
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
   publicPath: '/',
-  site: site,
 });
 
 // get the intended host and port number, use localhost and port 3000 if not provided

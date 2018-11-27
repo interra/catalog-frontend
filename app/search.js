@@ -101,7 +101,7 @@ export class elasticSearch extends Search {
     const body = {
       "query": {
         "match": {
-          "title": "*" + query + *"
+          "title": "*" + query + "*"
         }
       }
     };

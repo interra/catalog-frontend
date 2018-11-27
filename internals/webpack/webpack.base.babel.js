@@ -14,10 +14,8 @@ const omit = require('lodash/omit');
 // in the next major version of loader-utils.'
 process.noDeprecation = true;
 
-const config = fs.readFileSync(path.resolve(process.cwd(), '/config.yml'), 'utf8');
+const config = fs.readFileSync(path.resolve(process.cwd(), 'config.yml'), 'utf8');
 const interraConfig = omit(YAML.parse(config), 'private'); 
-
-console.log(interraConfig.publicPath);
 
 module.exports = (options) => ({
   entry: options.entry,

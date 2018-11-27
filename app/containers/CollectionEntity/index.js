@@ -27,7 +27,6 @@ import { actionSetCollectionName, actionLoadCollection, actionLoadBreadcrumb, ac
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import Form from "react-jsonschema-form";
 
 export class CollectionEntity extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 

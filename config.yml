@@ -8,12 +8,10 @@ schema: pod-full
 description: 'this is a demo'
 front-page-icon-collection: theme
 front-page-icons:
- - hospitalcompare 
- - homehealthcompare 
- - hospicecompare 
- - supplierdirectory 
- - nursinghomecompare 
- - physiciancompare 
+ - cityplanning 
+ - financeandbudgeting 
+ - healthcare
+ - transportation
 search:
   type: simpleSearch 
   fields:
