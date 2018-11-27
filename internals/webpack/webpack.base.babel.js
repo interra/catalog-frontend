@@ -16,6 +16,7 @@ process.noDeprecation = true;
 
 const config = fs.readFileSync(path.resolve(process.cwd(), 'config.yml'), 'utf8');
 const interraConfig = omit(YAML.parse(config), 'private');
+interraConfig.publicPath = 'publicPath' in interraConfig ? interraConfig.pubilcPath : '/';
 
 module.exports = (options) => ({
   entry: options.entry,

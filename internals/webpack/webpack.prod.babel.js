@@ -3,6 +3,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const fs = require('fs');
+const YAML = require('yamljs');
+const omit = require('lodash/omit');
+
+const config = fs.readFileSync(path.resolve(process.cwd(), 'config.yml'), 'utf8');
+const interraConfig = omit(YAML.parse(config), 'private');
+interraConfig.publicPath = 'publicPath' in interraConfig ? interraConfig.pubilcPath : '/';
 
 module.exports = require('./webpack.base.babel')({
   // In production, we skip all hot-reloading stuff
@@ -46,7 +53,7 @@ module.exports = require('./webpack.base.babel')({
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
     new OfflinePlugin({
       relativePaths: false,
-      publicPath: '/interra/',
+      publicPath: interraConfig.publicPath,
 
       // No need to cache .htaccess. See http://mxs.is/googmp,
       // this is applied before any match in `caches` section
