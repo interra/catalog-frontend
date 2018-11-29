@@ -8,12 +8,12 @@ schema: pod-full
 description: 'this is a demo'
 front-page-icon-collection: theme
 front-page-icons:
- - cityplanning 
- - financeandbudgeting 
+ - cityplanning
+ - financeandbudgeting
  - healthcare
  - transportation
 search:
-  type: simpleSearch 
+  type: simpleSearch
   fields:
     - title
     - keyword
@@ -37,9 +37,24 @@ siteMap:
     children:
     - collections
 siteMapCollections:
-  - organization 
+  - organization
   - dataset
-  - distribution 
+  - distribution
 fontConfig:
-  navBarBackColor: "#0A77BD"
- 
+  backColor: "#FFFFFF"
+  navBarBackColor: "#205493"
+  navBarLink: "#FFFFFF"
+  navBarLinkActive: "#FFFFFF"
+  navBarLinkHoverBack: "#112E51"
+  navBarLinkActiveBack: "#112E51"
+  navBarLinkActiveHoverBack: "#f2d13c"
+  navBarLinkActiveHover: "#FFFFFF"
+  link: "#0071BC"
+  linkHover: "#205493"
+  linkFocus: "#205493"
+  heroBackColor:   "#0071BC"
+  heroImageUrl:    "icon-pattern-bg.svg"
+  footerBackColor: "#323A45"
+  footerFontColor: "#FFFFFF"
+  footerLinkColor: "#FFFFFF"
+

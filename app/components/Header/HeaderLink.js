@@ -23,10 +23,12 @@ export default styled(Link)`
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: ${navBarLink};
+  transition: all 0.2s linear;
 
   &:hover.active {
-    background-color: ${navBarLinkActiveHoverBack};
-    color: ${navBarLinkActiveHover};
+    background-color: none !important;
+    box-shadow: inset 0 -4px 0 ${navBarLinkActiveHoverBack};
+    color: ${navBarLink};
   }
   &:hover {
     color: ${navBarLinkHover};
@@ -34,8 +36,9 @@ export default styled(Link)`
     background-color: ${navBarLinkHoverBack};
   }
   &.active {
-    background-color: ${navBarLinkActiveBack};
-    color: ${navBarLinkActive};
+    background-color: none !important;
+    box-shadow: inset 0 -4px 0 ${navBarLinkActiveHoverBack};
     text-decoration: none;
+    color: ${navBarLink};
   }
 `;
