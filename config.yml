@@ -41,7 +41,7 @@ siteMapCollections:
   - dataset
   - distribution
 fontConfig:
-  backColor: "#FFFFFF"
+  backColor: "#f9fafb"
   navBarBackColor: "#205493"
   navBarLink: "#FFFFFF"
   navBarLinkActive: "#FFFFFF"

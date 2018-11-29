@@ -15,6 +15,16 @@ const linkFocus = fonts && fonts.linkFocus ? fonts.linkFocus : "#23527c";
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  h4 {
+    margin: -1px 0 0;
+    background-color: #F4F9FB;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #323A45;
+    letter-spacing: .5px;
+    border: 1px solid #A4B9C6 !important;
+    padding: 13px 16px;
+  }
   html,
   body {
     height: 100%;
@@ -22,11 +32,11 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Rubik', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {
