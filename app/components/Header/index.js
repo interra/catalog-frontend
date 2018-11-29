@@ -21,7 +21,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     return (
       <div>
         <Link to="/">
-          <Img src="/logo.png" alt="Logo" />
+          <Img src="/logo.svg" alt="Logo" />
         </Link>
         <NavBar>
           <HeaderLink className={activeClass('/about')} to="/about">
