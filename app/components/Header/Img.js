@@ -4,6 +4,7 @@ import NormalImg from 'components/Img';
 
 const Img = styled(NormalImg)`
   max-height: 200px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px 50px;
   float: left;
