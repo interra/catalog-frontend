@@ -9,7 +9,7 @@ const omit = require('lodash/omit');
 
 const config = fs.readFileSync(path.resolve(process.cwd(), 'config.yml'), 'utf8');
 const interraConfig = omit(YAML.parse(config), 'private');
-interraConfig.publicPath = 'publicPath' in interraConfig ? interraConfig.pubilcPath : '/';
+interraConfig.publicPath = 'publicPath' in interraConfig ? interraConfig.publicPath : '/';
 
 module.exports = require('./webpack.base.babel')({
   // In production, we skip all hot-reloading stuff
